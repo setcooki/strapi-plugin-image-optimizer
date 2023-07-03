@@ -178,7 +178,7 @@ async function getMetadata(readStream: ReadStream): Promise<Metadata> {
 
 function getFileName(sourceFile: File, sizeName: string) {
   const fileNameWithoutExtension = sourceFile.name.replace(/\.[^\/.]+$/, "");
-  return `${sizeName}_${fileNameWithoutExtension}`;
+  return `${fileNameWithoutExtension}_${sizeName}`;
 }
 
 function getFileExtension(sourceFile: File, format: OutputFormat) {
